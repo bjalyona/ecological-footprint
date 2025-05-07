@@ -1,0 +1,22 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 0;
+  background: linear-gradient(var(--color-bg-light), var(--color-white));
+  /* background: #fdfff4; */
+  flex-wrap: wrap;
+}
+
+.hero_header {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero_description {
+  font-size: 1.5rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+
+}
