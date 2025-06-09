@@ -2,7 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
-import Calculator from "./pages/Calculator";
+import Calculator from "./pages/Calculator/Calculator";
 import Login from "./pages/Login";
 import History from "./pages/History";
 

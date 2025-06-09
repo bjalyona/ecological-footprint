@@ -12,10 +12,11 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="container">
-        <h1 className="hero_header">Calculate your Ecological Footprint</h1>
+        <h1 className="hero_header">Рассчитайте свой Экологический След</h1>
         <p className="hero_description">
-          Understand your carbon footprint and discover simple ways to reduce
-          your impact on the planet. Small changes can make a big difference.
+          Узнайте степень вашего воздействия на окружающую среду и то, как вы
+          можете помочь нашей планете. Небольшие изменения ведут к большим
+          переменам.
         </p>
         <Button onClick={handleStartClick}>Start now</Button>
       </div>

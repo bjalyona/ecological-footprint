@@ -1,0 +1,15 @@
+.question-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.planet-display {
+    width: 100px;
+    height: 100px;
+}
+
+.planet-img {
+    height: 100px;
+    /* width: 100px; */
+}

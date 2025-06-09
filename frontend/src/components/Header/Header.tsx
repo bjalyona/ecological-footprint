@@ -13,7 +13,7 @@ export default function Header() {
               isActive ? "header_link-active" : "header_link"
             }
           >
-            Home
+            Главная
           </NavLink>
           <NavLink
             to="/calculator"
@@ -21,7 +21,7 @@ export default function Header() {
               isActive ? "header_link-active" : "header_link"
             }
           >
-            Calculator
+            Калькулятор
           </NavLink>
           <NavLink
             to="/history"
@@ -29,7 +29,7 @@ export default function Header() {
               isActive ? "header_link-active" : "header_link"
             }
           >
-            History
+            История
           </NavLink>
           <NavLink
             to="/login"
@@ -37,7 +37,7 @@ export default function Header() {
               isActive ? "header_link-active" : "header_link"
             }
           >
-            Login
+            Профиль
           </NavLink>
         </nav>
       </div>

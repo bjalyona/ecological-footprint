@@ -1,6 +1,5 @@
 .button {
-  background-color: var(--color-primary); 
-  color: white;
+  
   font-size: 1.25rem;
   font-weight: 500;
   padding: 12px 24px;
@@ -8,4 +7,13 @@
   border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.primary{
+  background-color: var(--color-primary); 
+  color: white;
+}
+
+.secondary {
+  
 }
