@@ -26,7 +26,7 @@ export default function PlanetDisplay({ planets }: PlanetDisplayProps) {
         />
       )}
       <span>
-        ≈ {planets.toFixed(2)} планет
+        {planets.toFixed(2)} планет
       </span>
     </div>
   );

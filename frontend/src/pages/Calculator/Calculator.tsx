@@ -101,7 +101,7 @@ export default function Calculator() {
   const ghaComparisonData = result
     ? [
         { name: "Твой результат", value: result.gha },
-        { name: "Результат по России", value: 4.4 },
+        { name: "Средний результат по России", value: 4.4 },
         { name: "Средний результат по миру", value: 2.7 },
       ]
     : [];
@@ -144,7 +144,7 @@ export default function Calculator() {
             </div>
 
             <div className="chart-container">
-              <h3>Вклад разных сфер в ваш углеродный след</h3>
+              <h3>Вклад разных сфер в твой углеродный след</h3>
               <ResponsiveContainer width="100%" height={300}>
                 <PieChart>
                   <Pie
