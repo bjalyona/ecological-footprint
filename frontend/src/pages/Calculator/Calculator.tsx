@@ -8,6 +8,8 @@ import {
 
 import { questions } from "../../utils/questions";
 import FootprintStats from "../../components/FootprintStats/FootprintStats";
+import { useAuth } from "../../hooks/useAuth";
+import { saveFootprint } from "../../services/api";
 
 const initialData: UserInput = {
   meatMealsPerWeek: 0,
@@ -75,15 +77,28 @@ export default function Calculator() {
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState<UserInput>(initialData);
   const [result, setResult] = useState<FootprintResult | null>(null);
+  const { token } = useAuth();
 
-  const handleAnswer = (value: number | boolean) => {
+  const handleAnswer = async (value: number | boolean) => {
     const key = questions[current].key as keyof UserInput;
-    setAnswers((prev) => ({ ...prev, [key]: value }));
+    const updatedAnswers = { ...answers, [key]: value };
+
+    setAnswers(updatedAnswers);
+
     if (current < questions.length - 1) {
       setCurrent(current + 1);
     } else {
-      const result = calculateFootprint(answers);
+      const result = calculateFootprint(updatedAnswers);
       setResult(result);
+
+      if (token) {
+        try {
+          await saveFootprint(updatedAnswers, result, token);
+          console.log("saved");
+        } catch (error) {
+          console.error(error);
+        }
+      }
     }
   };
 
@@ -97,6 +112,14 @@ export default function Calculator() {
               options={questions[current].options}
               onSelect={handleAnswer}
             />
+          </div>
+        ) : !token ? (
+          <div>
+            <div>
+              Авторизуйтесь, чтобы сохранить свой ответ
+              <button>Вход</button>
+            </div>
+            <FootprintStats result={result} />
           </div>
         ) : (
           <FootprintStats result={result} />

@@ -1,4 +1,4 @@
-import './Calculator.css';
+import '../../pages/Calculator/Calculator.css';
 
 type PlanetDisplayProps = {
   planets: number;
