@@ -3,8 +3,8 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
 import Calculator from "./pages/Calculator/Calculator";
-import Login from "./pages/Login";
 import History from "./pages/History";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/calculator" element={<Calculator />} />
           <Route path="/history" element={<History />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </main>
     </Router>

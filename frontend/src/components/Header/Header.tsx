@@ -32,7 +32,7 @@ export default function Header() {
             История
           </NavLink>
           <NavLink
-            to="/login"
+            to="/profile"
             className={({ isActive }) =>
               isActive ? "header_link-active" : "header_link"
             }
