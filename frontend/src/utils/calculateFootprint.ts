@@ -35,11 +35,11 @@ export type FootprintResult = {
   gha: number;
   planets: number;
   breakdownByCategory: {
-    Food: number,
-    Transport: number,
-    "Energy & Housing": number,
-    Consumption: number,
-    Digital: number,
+    "Еда": number,
+    "Транспорт": number,
+    "Энергия и жилье": number,
+    "Потребление": number,
+    "Цифровое поведение": number,
   };
 };
 
@@ -98,11 +98,11 @@ export function calculateFootprint(data: UserAnswers): FootprintResult {
     gha: parseFloat(gha.toFixed(2)),
     planets: parseFloat(planets.toFixed(2)),
     breakdownByCategory: {
-    Food: co2.meat + co2.dairy + co2.localVeg + co2.importedVeg,
-    Transport: co2.car + co2.publicTransport + co2.flight,
-    "Energy & Housing": co2.electricity + co2.gas + co2.housing,
-    Consumption: co2.clothes + co2.electronics,
-    Digital: co2.streaming + co2.cloud,
+    "Еда": Math.round(co2.meat + co2.dairy + co2.localVeg + co2.importedVeg),
+    "Транспорт": Math.round(co2.car + co2.publicTransport + co2.flight),
+    "Энергия и жилье": Math.round(co2.electricity + co2.gas + co2.housing),
+    "Потребление": Math.round(co2.clothes + co2.electronics),
+    "Цифровое поведение": Math.round(co2.streaming + co2.cloud),
   },
   };
 }

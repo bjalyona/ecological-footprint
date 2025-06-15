@@ -18,7 +18,8 @@ export default function Hero() {
           можете помочь нашей планете. Небольшие изменения ведут к большим
           переменам.
         </p>
-        <Button onClick={handleStartClick}>Start now</Button>
+        <Button onClick={handleStartClick}>Начать сейчас</Button>
+        
       </div>
     </section>
   );

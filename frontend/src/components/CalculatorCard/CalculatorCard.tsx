@@ -33,9 +33,11 @@ export default function CalculatorCard({ question, options, onSelect } : Calcula
           </button>
         ))}
       </div>
-      <Button variant="primary" className="next-button" onClick={handleNext}>
-        Next
+      <div className="button-container">
+        <Button variant="primary" className="next-button" onClick={handleNext}>
+        Далее
       </Button>
+      </div>
     </div>
   );
 }

@@ -103,7 +103,7 @@ export default function Calculator() {
   };
 
   return (
-    <div className="container">
+    
       <div className="calculator-container">
         {result === null ? (
           <div className="question-container">
@@ -125,6 +125,6 @@ export default function Calculator() {
           <FootprintStats result={result} />
         )}
       </div>
-    </div>
+    
   );
 }

@@ -1,4 +1,5 @@
 import '../../pages/Calculator/Calculator.css';
+import './FootprintStats.css'
 
 type PlanetDisplayProps = {
   planets: number;
@@ -10,6 +11,7 @@ export default function PlanetDisplay({ planets }: PlanetDisplayProps) {
 
   return (
     <div >
+      <div className="planets-container">
       {[...Array(fullPlanets)].map((_, i) => (
         <img
           key={i}
@@ -18,15 +20,18 @@ export default function PlanetDisplay({ planets }: PlanetDisplayProps) {
           className="planet-img"
         />
       ))}
-      {hasHalf && (
+      
+        {hasHalf && (
         <img
           src="/planet-half.png"
           alt="Half planet"
           className="planet-img"
         />
       )}
-      <span>
-        {planets.toFixed(2)} планет
+      </div>
+      <br />
+      <span className="stats-descr">
+        - <b className='text-bigger'>{planets.toFixed(2)} наших планет</b> потребуется, если все люди будут потреблять так же, как и вы
       </span>
     </div>
   );

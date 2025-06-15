@@ -1,0 +1,70 @@
+.stats-container {
+}
+
+.planet-display {
+    width: 200px;
+    height: 200px;
+}
+
+.planets-container{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.planet-img {
+    height: 200px;
+    /* width: 100px; */
+}
+
+.stats-result {
+    font-size: 50px;
+    margin-top: 30px;
+
+}
+
+.stats-descr{
+    margin-top: 20px;
+    font-size: 30px;
+    line-height: 35px;
+    color: var(--color-gray-dark);
+}
+
+.green-text{
+    color: var(--color-primary);
+    font-size: 130%;
+}
+
+.text-bigger{
+    font-size: 120%;
+}
+
+.pie-chart-container {
+    margin-top: 20px;
+    display: flex;
+    font-display: row;
+    justify-content: center;
+
+
+}
+.pie-chart-container h3{
+    width: 100%;
+    font-weight: normal;
+    font-size: 30px;
+    text-align: right;
+    margin: auto 0;
+    
+
+    color: var(--color-gray-dark);
+}
+
+.comparison-chart {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.comparison-chart h3{
+    font-size: 30px;
+    margin: 20px 0;
+    text-align: center;
+}
+

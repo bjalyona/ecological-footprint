@@ -3,8 +3,8 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
 import Calculator from "./pages/Calculator/Calculator";
-import History from "./pages/History";
-import Profile from "./pages/Profile";
+import History from "./pages/History/History";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   return (

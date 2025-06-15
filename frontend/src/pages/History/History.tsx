@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { getHistory } from "../services/api";
-import { useAuth } from "../hooks/useAuth";
-import ResultCard from "../components/ResultCard/ResultCard";
-import FootprintStats from "../components/FootprintStats/FootprintStats";
-import type { FootprintResult } from "../utils/calculateFootprint";
+import { getHistory } from "../../services/api";
+import { useAuth } from "../../hooks/useAuth";
+import ResultCard from "../../components/ResultCard/ResultCard";
+import FootprintStats from "../../components/FootprintStats/FootprintStats";
+import type { FootprintResult } from "../../utils/calculateFootprint";
+import './History.css'
 
 export type FootprintResultWithDate = FootprintResult & {
   id: string;
@@ -40,15 +41,20 @@ export default function History() {
   }
 
   if (!token) {
-    return <p>Войдите или зарегистрируйтесь, чтобы увидеть историю</p>;
+    return (
+      <div className="container">
+        <p>Войдите или зарегистрируйтесь, чтобы увидеть историю</p>
+      </div>
+    )
   }
 
   return (
-    <>
+    <div className="container">
+      <h2 className="history-header">История расчета вашего экологического следа</h2>
       {results.length === 0 ? (
         <p>Нет сохраненных результатов</p>
       ) : (
-        <div>
+        <div className="history-container">
           {results.map((result) => (
             <ResultCard
               key={result.id}
@@ -58,6 +64,6 @@ export default function History() {
           ))}
         </div>
       )}
-    </>
+    </div>
   );
 }

@@ -1,4 +1,5 @@
-import type { FootprintResultWithDate } from "../../pages/History";
+import type { FootprintResultWithDate } from "../../pages/History/History";
+import "./ResultCard.css";
 
 interface ResultCardProps {
   result: FootprintResultWithDate;
@@ -7,10 +8,24 @@ interface ResultCardProps {
 
 export default function ResultCard({ result, onClick }: ResultCardProps) {
   return (
-    <div onClick={onClick}>
-      <p><strong>Дата:</strong> {new Date(result.createdAt).toLocaleString()}</p>
-      <p><strong>След gha:</strong> {result.gha.toFixed(2)}</p>
-      <p><strong>CO₂:</strong> {result.co2KgPerYear.toFixed(0)}</p>
+    <div className="result-card" onClick={onClick}>
+      <p className="result-date">
+        {new Date(result.createdAt).toLocaleString("ru-RU", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+        })}
+      </p>
+      <div className="result-descr">
+        <p className="result-amount">
+          <strong>След gha:</strong> {result.gha.toFixed(2)}
+        </p>
+        <p className="result-amount">
+          <strong>CO₂:</strong> {result.co2KgPerYear.toFixed(0)}
+        </p>
+      </div>
     </div>
   );
 }

@@ -36,6 +36,12 @@
 
 .next-button {
   margin-top: 20px;
+
+}
+
+.button-container {
+  display: flex;
+  justify-content: end;
 }
 
 
